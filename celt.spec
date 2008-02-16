@@ -1,15 +1,16 @@
 Summary:	CELT low-latency audio codec
 Summary(pl.UTF-8):	CELT - kodek dźwiękowy o małym opóźnieniu
 Name:		celt
-Version:	0.0.2
-Release:	0.1
+Version:	0.1.0
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://downloads.xiph.org/releases/celt/%{name}-%{version}.tar.gz
-# Source0-md5:	e2d3c73b23d40840a7d81dfe30ca5d5f
+# Source0-md5:	dd2768a3e52288949eb387ed4f984697
 # author's blog for now
 URL:		http://jmspeex.livejournal.com/
-#BuildRequires:	libogg-devel
+# for tools
+BuildRequires:	libogg-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# just tests
+rm $RPM_BUILD_ROOT%{_bindir}/{cwrs{32,64}-test,ectest,match-test.sh,type-test}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -63,23 +67,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING README
-#%attr(755,root,root) %{_bindir}/*
+%doc COPYING README TODO
+%attr(755,root,root) %{_bindir}/celtdec
+%attr(755,root,root) %{_bindir}/celtenc
 %attr(755,root,root) %{_libdir}/libcelt.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libcelt.so.0
-%attr(755,root,root) %{_libdir}/libentcode.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libentcode.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libcelt.so
-%attr(755,root,root) %{_libdir}/libentcode.so
 %{_libdir}/libcelt.la
-%{_libdir}/libentcode.la
-#%{_includedir}/foo
-#%{_pkgconfigdir}/*.pc
+%{_includedir}/celt
+%{_pkgconfigdir}/celt.pc
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libcelt.a
-%{_libdir}/libentcode.a

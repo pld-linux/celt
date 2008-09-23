@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	http://downloads.xiph.org/releases/celt/%{name}-%{version}.tar.gz
 # Source0-md5:	2ab8d22ea01a67ace89d1eee6bd8cad5
 # author's blog for now
-URL:		http://jmspeex.livejournal.com/
+URL:		http://celt-codec.org/
 # for tools
 BuildRequires:	libogg-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

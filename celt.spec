@@ -7,7 +7,6 @@ License:	BSD
 Group:		Libraries
 Source0:	http://downloads.xiph.org/releases/celt/%{name}-%{version}.tar.gz
 # Source0-md5:	dd7cda953e4df448083b69af9afc15e1
-# author's blog for now
 URL:		http://celt-codec.org/
 # for tools
 BuildRequires:	libogg-devel

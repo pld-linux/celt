@@ -1,12 +1,12 @@
 Summary:	CELT low-latency audio codec
 Summary(pl.UTF-8):	CELT - kodek dźwiękowy o małym opóźnieniu
 Name:		celt
-Version:	0.8.0
+Version:	0.8.1
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://downloads.xiph.org/releases/celt/%{name}-%{version}.tar.gz
-# Source0-md5:	6bbd0aa966af3214f794421959fb38e9
+# Source0-md5:	77956fd13a1ee1c179941ed9bec405f1
 URL:		http://celt-codec.org/
 # for tools
 BuildRequires:	libogg-devel

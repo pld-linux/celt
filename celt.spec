@@ -19,28 +19,28 @@ CELT is an attempt to write a low-latency audio codec.
 CELT to próba napisania kodeka dźwiękowego o małym opóźnieniu.
 
 %package devel
-Summary:	Header files for CELT libraries
-Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek CELT
+Summary:	Header files for CELT library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki CELT
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
-Header files for CELT libraries.
+Header files for CELT library.
 
 %description devel -l pl.UTF-8
-Pliki nagłówkowe bibliotek CELT.
+Pliki nagłówkowe biblioteki CELT.
 
 %package static
-Summary:	Static CELT libraries
-Summary(pl.UTF-8):	Statyczne biblioteki CELT
+Summary:	Static CELT library
+Summary(pl.UTF-8):	Statyczna biblioteka CELT
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static CELT libraries.
+Static CELT library.
 
 %description static -l pl.UTF-8
-Statyczne biblioteki CELT.
+Statyczna biblioteka CELT.
 
 %prep
 %setup -q

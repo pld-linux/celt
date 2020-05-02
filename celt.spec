@@ -46,6 +46,7 @@ Statyczna biblioteka CELT.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 

@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://downloads.xiph.org/releases/celt/%{name}-%{version}.tar.gz
 # Source0-md5:	5511732a426cc42bf986ca79b5cdd02f
 URL:		http://celt-codec.org/
+BuildRequires:	automake
 # for tools
 BuildRequires:	libogg-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
